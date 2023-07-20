@@ -100,8 +100,8 @@ public:
         if(pos < nAnod) buf[pos] = digitMask[x];
     }    
 
-    void print(int16_t* arr, int8_t size = nAnod){
-        for (uint8_t i = 0;i < size;i++)
+    void print(int16_t* arr){
+        for (uint8_t i = 0;i < nAnod;i++)
             buf[i] = digitMask[arr[i]];
     }
 
@@ -117,8 +117,8 @@ public:
         if(pos < nAnod) buf[pos] = x;
     }  
 
-    void printChar(int16_t* arr, int8_t size = nAnod){
-        for (uint8_t i = 0;i < size;i++)
+    void printChar(int16_t* arr){
+        for (uint8_t i = 0;i < nAnod;i++)
             buf[i] = arr[i];
     }
     //-----Char-----//
