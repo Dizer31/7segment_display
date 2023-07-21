@@ -1,10 +1,14 @@
 #pragma once
 #include "code.h"
 
-//-----setting-----//
+#ifndef invertS
 #define invertS 1
+#endif
+
+
+#ifndef invertA
 #define invertA 1
-//-----setting-----//
+#endif
 
 #if invertS == 1
 #define setPinS(pin, x) digitalWrite(pin, !x)
@@ -72,7 +76,7 @@ public:
     
     void setBrightness(uint8_t pos, uint8_t x){   //x = 0...24
         if(pos < nAnod)
-            brightness[pos] = (x > 24 ? 24: x);
+            brightness[pos] = (x > 24 ? 24 : x);
     }
 
     void clear(){
